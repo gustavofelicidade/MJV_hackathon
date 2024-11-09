@@ -14,4 +14,4 @@ st.set_page_config(layout="wide",
 
 if __name__ == "__main__":
     main_app = Main()
-    main_app.main()
+

@@ -5,6 +5,9 @@ aproveitar sinergias de mercado que possam ser exploradas conjuntamente a MJV. O
 utilizar as ferramentas, competências e conhecimentos específicos de cada grupo para desenvolver
 soluções que potencializem oportunidades de negócio e promovam crescimento mútuo.
 
+# Produção
+
+https://mjvhackathon-production.up.railway.app/
 
 # Nossa Proposta: Triage Nurse Assistant
 
