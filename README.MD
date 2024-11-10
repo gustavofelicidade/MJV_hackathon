@@ -29,4 +29,4 @@ Este projeto tem como objetivo otimizar a triagem de pacientes em departamentos 
 
 1. Clone o repositório.
 2. Instale as dependências: `pip install -r requirements.txt`
-3. Inicie a aplicação: `python main.py`
+3. Inicie a aplicação: `streamlit run main.py`
