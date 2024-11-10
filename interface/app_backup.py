@@ -38,7 +38,8 @@ def llama_chatbot(message):
                     "properties": {
                         "triagem": {
                             "type": "string",
-                            "description": "Como um assistente profissional de enfermagem, você deve fornecer uma triagem",
+                            "description": "Como um assistente profissional de enfermagem,"
+                                           " você deve fornecer uma triagem",
                         },
                         "diagnostico": {
                             "type": "string",
@@ -65,24 +66,15 @@ def llama_chatbot(message):
 
     return assistant_message
 
-# Função para limpar o histórico de chat
-def clear_chat_history():
-    st.session_state.messages = []
-
 class Main:
     def __init__(self):
         # Título principal do app
         st.title("MJV Saúde")
 
-        # Adicionar opções de navegação no sidebar
-        page = st.sidebar.radio("Navegação", ["Triagem de Pacientes", "Assistente Virtual"])
+        # Criar abas
+        tab1, tab2 = st.tabs(["Triagem de Pacientes", "Assistente Virtual"])
 
-        # Mostrar o botão 'Limpar Chat' no sidebar somente na página 'Assistente Virtual'
-        if page == "Assistente Virtual":
-            # Botão para limpar o chat no sidebar
-            st.sidebar.button("Limpar Chat", on_click=clear_chat_history)
-
-        if page == "Triagem de Pacientes":
+        with tab1:
             st.header("Triagem de Pacientes")
 
             # Configurando o upload de arquivo
@@ -96,7 +88,7 @@ class Main:
             with col1:
                 image_path = Path("./assets/images/image2.png")
                 if image_path.exists():
-                    st.image(str(image_path), use_column_width=True)
+                    st.image(str(image_path), use_container_width=True)
                 else:
                     st.warning("Imagem não encontrada em ./assets/images/image2.png")
 
@@ -116,7 +108,7 @@ class Main:
                 else:
                     st.info("Por favor, carregue um arquivo CSV para visualizar os dados.")
 
-        elif page == "Assistente Virtual":
+        with tab2:
             st.header("Assistente Virtual")
 
             # Inicializar histórico de mensagens
@@ -150,8 +142,6 @@ class Main:
                         st.write(response)
                         # Adicionar resposta ao histórico
                         st.session_state.messages.append({"role": "assistant", "content": response})
-
-    # Você pode adicionar mais métodos ou funções à classe Main, se necessário
 
 # Execução do aplicativo principal
 if __name__ == "__main__":

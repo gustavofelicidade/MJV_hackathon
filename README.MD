@@ -1,4 +1,4 @@
-# Hackaton  MJV 4.0
+# Hackaton  MJV  Saúde
 
 Nesta Hackathon, desafiamos os participantes a colaborarem de forma inovadora para identificar e
 aproveitar sinergias de mercado que possam ser exploradas conjuntamente a MJV. O objetivo é
