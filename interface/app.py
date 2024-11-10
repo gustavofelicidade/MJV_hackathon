@@ -96,7 +96,7 @@ class Main:
             with col1:
                 image_path = Path("./assets/images/image2.png")
                 if image_path.exists():
-                    st.image(str(image_path), use_column_width=True)
+                    st.image(str(image_path), use_container_width=True)
                 else:
                     st.warning("Imagem não encontrada em ./assets/images/image2.png")
 
